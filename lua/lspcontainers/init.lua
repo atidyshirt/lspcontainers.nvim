@@ -2,6 +2,8 @@ Config = {
   ensure_installed = {}
 }
 
+local UPSTREAM = "lspcontainers/"
+
 local supported_languages = {
   bashls = { image = "docker.io/lspcontainers/bash-language-server" },
   clangd = { image = "docker.io/lspcontainers/clangd-language-server" },
@@ -48,24 +50,24 @@ local supported_languages = {
     end,
     image = "docker.io/lspcontainers/gopls",
   },
-  graphql = { image = "docker.io/lspcontainers/graphql-language-service-cli" },
-  html = { image = "docker.io/lspcontainers/html-language-server" },
-  intelephense = { image = "docker.io/lspcontainers/intelephense" },
-  jsonls = { image = "docker.io/lspcontainers/json-language-server" },
-  omnisharp = { image = "docker.io/lspcontainers/omnisharp" },
-  powershell_es = { image = "docker.io/lspcontainers/powershell-language-server" },
-  prismals = { image = "docker.io/lspcontainers/prisma-language-server" },
-  pylsp = { image = "docker.io/lspcontainers/python-lsp-server" },
-  pyright = { image = "docker.io/lspcontainers/pyright-langserver" },
-  rust_analyzer = { image = "docker.io/lspcontainers/rust-analyzer" },
-  solargraph = { image = "docker.io/lspcontainers/solargraph" },
-  sumneko_lua = { image = "docker.io/lspcontainers/lua-language-server" },
-  svelte = { image = "docker.io/lspcontainers/svelte-language-server" },
-  tailwindcss= { image = "docker.io/lspcontainers/tailwindcss-language-server" },
-  terraformls = { image = "docker.io/lspcontainers/terraform-ls" },
-  tsserver = { image = "docker.io/lspcontainers/typescript-language-server" },
-  vuels = { image = "docker.io/lspcontainers/vue-language-server" },
-  yamlls = { image = "docker.io/lspcontainers/yaml-language-server" },
+  graphql = { image = UPSTREAM + "graphql-language-service-cli" },
+  html = { image = UPSTREAM + "html-language-server" },
+  intelephense = { image = UPSTREAM + "intelephense" },
+  jsonls = { image = UPSTREAM + "json-language-server" },
+  omnisharp = { image = UPSTREAM + "omnisharp" },
+  powershell_es = { image = UPSTREAM + "powershell-language-server" },
+  prismals = { image = UPSTREAM + "prisma-language-server" },
+  pylsp = { image = UPSTREAM + "python-lsp-server" },
+  pyright = { image = UPSTREAM + "pyright-langserver" },
+  rust_analyzer = { image = UPSTREAM + "rust-analyzer" },
+  solargraph = { image = UPSTREAM + "solargraph" },
+  sumneko_lua = { image = UPSTREAM + "lua-language-server" },
+  svelte = { image = UPSTREAM + "svelte-language-server" },
+  tailwindcss= { image = UPSTREAM + "tailwindcss-language-server" },
+  terraformls = { image = UPSTREAM + "terraform-ls" },
+  tsserver = { image = UPSTREAM + "typescript-language-server" },
+  vuels = { image = UPSTREAM + "vue-language-server" },
+  yamlls = { image = UPSTREAM + "yaml-language-server" },
 }
 
 -- default command to run the lsp container
